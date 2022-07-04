@@ -2,8 +2,11 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/JavaToKotlinDemo.iml" filepath="$PROJECT_DIR$/JavaToKotlinDemo.iml" />
-      <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/after.iml" filepath="$PROJECT_DIR$/.idea/modules/after.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/after.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/after.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/after.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/after.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/after.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/after.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/after.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/after.app.unitTest.iml" />
     </modules>
   </component>
 </project>
