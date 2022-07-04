@@ -59,10 +59,16 @@ class DisplayActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 		if (intent.getIntExtra(Constants.KEY_QUERY_TYPE, -1) == Constants.SEARCH_BY_REPO) {
 			val queryRepo = intent.getStringExtra(Constants.KEY_REPO_SEARCH)
 			val repoLanguage = intent.getStringExtra(Constants.KEY_LANGUAGE)
-			fetchRepositories(queryRepo, repoLanguage)
+			if (queryRepo != null) {
+				if (repoLanguage != null) {
+					fetchRepositories(queryRepo, repoLanguage)
+				}
+			}
 		} else {
 			val githubUser = intent.getStringExtra(Constants.KEY_GITHUB_USER)
-			fetchUserRepositories(githubUser)
+			if (githubUser != null) {
+				fetchUserRepositories(githubUser)
+			}
 		}
 	}
 

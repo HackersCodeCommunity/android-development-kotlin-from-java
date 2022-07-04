@@ -2,11 +2,11 @@ package com.sriyank.javatokotlindemo.activities
 
 import android.content.Context
 import android.os.Bundle
-import android.support.design.widget.NavigationView
-import android.support.v4.view.GravityCompat
-import android.support.v7.app.ActionBarDrawerToggle
-import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.LinearLayoutManager
+import com.google.android.material.navigation.NavigationView
+import androidx.core.view.GravityCompat
+import androidx.appcompat.app.ActionBarDrawerToggle
+import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.LinearLayoutManager
 import android.util.Log
 import android.view.MenuItem
 import com.sriyank.javatokotlindemo.R
@@ -45,7 +45,8 @@ class DisplayActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 
 		setAppUsername()
 
-		val layoutManager = LinearLayoutManager(this)
+		val layoutManager =
+			LinearLayoutManager(this)
 		layoutManager.orientation = LinearLayoutManager.VERTICAL
 		recyclerView.layoutManager = layoutManager
 
@@ -59,10 +60,16 @@ class DisplayActivity : AppCompatActivity(), NavigationView.OnNavigationItemSele
 		if (intent.getIntExtra(Constants.KEY_QUERY_TYPE, -1) == Constants.SEARCH_BY_REPO) {
 			val queryRepo = intent.getStringExtra(Constants.KEY_REPO_SEARCH)
 			val repoLanguage = intent.getStringExtra(Constants.KEY_LANGUAGE)
-			fetchRepositories(queryRepo, repoLanguage)
+			if (queryRepo != null) {
+				if (repoLanguage != null) {
+					fetchRepositories(queryRepo, repoLanguage)
+				}
+			}
 		} else {
 			val githubUser = intent.getStringExtra(Constants.KEY_GITHUB_USER)
-			fetchUserRepositories(githubUser)
+			if (githubUser != null) {
+				fetchUserRepositories(githubUser)
+			}
 		}
 	}
 

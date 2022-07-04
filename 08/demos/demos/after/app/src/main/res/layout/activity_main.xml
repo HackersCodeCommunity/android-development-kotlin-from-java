@@ -6,7 +6,7 @@
 	android:layout_height="match_parent"
 	android:orientation="vertical">
 
-	<android.support.v7.widget.Toolbar
+	<androidx.appcompat.widget.Toolbar
 		android:id="@+id/toolbar"
 		android:layout_width="match_parent"
 		android:layout_height="wrap_content"
@@ -23,7 +23,7 @@
 		android:paddingEnd="30dp"
 		android:paddingStart="30dp">
 
-		<android.support.design.widget.TextInputLayout
+		<com.google.android.material.textfield.TextInputLayout
 			android:id="@+id/inputLayoutName"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -36,7 +36,7 @@
 				android:layout_marginTop="30dp"
 				android:hint="@string/et_your_name"/>
 
-		</android.support.design.widget.TextInputLayout>
+		</com.google.android.material.textfield.TextInputLayout>
 
 		<Button
 			android:layout_width="match_parent"
@@ -44,7 +44,7 @@
 			android:onClick="saveName"
 			android:text="@string/btn_save_name"/>
 
-		<android.support.design.widget.TextInputLayout
+		<com.google.android.material.textfield.TextInputLayout
 			android:id="@+id/inputLayoutRepoName"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -55,9 +55,9 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:hint="@string/et_repository_search"/>
-		</android.support.design.widget.TextInputLayout>
+		</com.google.android.material.textfield.TextInputLayout>
 
-		<android.support.design.widget.TextInputLayout
+		<com.google.android.material.textfield.TextInputLayout
 			android:id="@+id/inputLayoutLanguage"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content">
@@ -67,7 +67,7 @@
 				android:layout_width="match_parent"
 				android:layout_height="wrap_content"
 				android:hint="@string/et_language"/>
-		</android.support.design.widget.TextInputLayout>
+		</com.google.android.material.textfield.TextInputLayout>
 
 		<Button
 			android:layout_width="match_parent"
@@ -75,7 +75,7 @@
 			android:onClick="listRepositories"
 			android:text="@string/btn_search_repositories"/>
 
-		<android.support.design.widget.TextInputLayout
+		<com.google.android.material.textfield.TextInputLayout
 			android:id="@+id/inputLayoutGithubUser"
 			android:layout_width="match_parent"
 			android:layout_height="wrap_content"
@@ -87,7 +87,7 @@
 				android:layout_height="wrap_content"
 				android:hint="@string/et_hint_github_username"/>
 
-		</android.support.design.widget.TextInputLayout>
+		</com.google.android.material.textfield.TextInputLayout>
 
 		<Button
 			android:layout_width="match_parent"
